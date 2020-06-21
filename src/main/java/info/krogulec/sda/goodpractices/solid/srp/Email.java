@@ -1,4 +1,4 @@
-package info.krogulec.sda.goodpractices.solid;
+package info.krogulec.sda.goodpractices.solid.srp;
 
 public class Email {
     private String from;
