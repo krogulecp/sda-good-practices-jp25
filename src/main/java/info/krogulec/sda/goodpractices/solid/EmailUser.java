@@ -9,6 +9,8 @@ public class EmailUser {
         email.setSubject("subj");
         email.setMessage("msg");
 
-        email.send();
+        Validator.validateEmail(email.getMessage());
+
+        new EmailSender(email).send();
     }
 }
