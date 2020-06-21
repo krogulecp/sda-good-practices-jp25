@@ -1,19 +1,15 @@
 package info.krogulec.sda.goodpractices.names;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Ships {
 
     List<Cell> gameBoard;
 
     public List<Cell> getFlaggedCells() {
-        List<Cell> flaggedCells = new ArrayList<>();
-        for (Cell cell : gameBoard) {
-            if (cell.isFlagged()) {
-                flaggedCells.add(cell);
-            }
-        }
-        return flaggedCells;
+        return gameBoard.stream()
+                .filter(Cell::isFlagged)
+                .collect(Collectors.toList());
     }
 }
